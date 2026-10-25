@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Strict CSP: only files from this same site may run or load. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+
+  <title>Java Backend Interview Checklist</title>
+  <meta name="description" content="A free topic checklist for Java backend interview preparation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">java<span>-checklist</span></div>
+    <div class="progress-wrap">
+      <progress id="overall-progress" max="100" value="0" aria-label="Overall progress"></progress>
+      <span id="overall-label">0 / 0 done</span>
+    </div>
+    <button type="button" id="nav-toggle" class="toc-toggle" aria-controls="sidebar" aria-expanded="false">&#9776; Contents</button>
+  </header>
+
+  <!-- Opt-in storage popup. Hidden until app.js shows it. Nothing is stored until "Yes". -->
+  <aside id="consent" class="consent" role="dialog" aria-labelledby="consent-title" hidden>
+    <h2 id="consent-title">Save your progress in this browser?</h2>
+    <p>
+      If you click <strong>Yes</strong>, your ticked items are saved in this browser's
+      local storage on your device only. Nothing is sent anywhere.
+      If you click <strong>No</strong> or ignore this, nothing is saved and the list resets when you reload.
+    </p>
+    <div class="consent-actions">
+      <button type="button" id="consent-yes">Yes, save</button>
+      <button type="button" id="consent-no" class="secondary">No</button>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" id="toc" aria-label="Sections"></nav>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="page">
+      <section class="hero">
+        <div class="badge">Java · Spring · Microservices · System Design</div>
+        <h1>Java Backend<br><span>Interview Checklist</span></h1>
+        <p>Every topic a 3-8 year Java backend engineer is expected to know, in one tickable list. Work through it section by section and track your progress.</p>
+        <div class="tags">
+          <span>3-8 YOE</span>
+          <span id="tag-sections">27 sections</span>
+          <span id="tag-topics">653 topics</span>
+        </div>
+      </section>
+
+      <main id="content" aria-live="polite">
+        <p>Loading checklist…</p>
+        <noscript><p>This page needs JavaScript to show the checklist.</p></noscript>
+      </main>
+
+      <footer class="bottom">
+        <span id="storage-status">Storage: off</span>
+        <button type="button" id="storage-toggle" class="link">Turn on</button>
+        <button type="button" id="reset-progress" class="link">Reset ticks</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="vendor/purify.min.js"></script>
+  <script src="vendor/marked.umd.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
